@@ -12,7 +12,7 @@ def phi(x) :
 	return np.append(1, np.exp(-(x - np.arange(0, 1 + s, s)) ** 2 / (2 * s * s)))
 
 # Normal Linear Regression
-PHI = np.array([phi(x) for x in X])
+PHI = np.array([phi(x) for x in X])  
 print ("PHI = ",PHI)
 
 omega_normal = np.linalg.solve(np.dot(PHI.T, PHI), np.dot(PHI.T, t))
